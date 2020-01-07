@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax27 | JS-Maze</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .hidden {
+        display: none !important;
+      }
+      h1 {
+        color: white;
+        font-size: 6rem;
+        font-family: monospace;
+        font-weight: lighter;
+      }
+      .winner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+      }
+      .button {
+        width: 100px;
+        height: 45px;
+        font-size: 1.4rem;
+        padding: 5px;
+        color: #fff;
+        background-color: #060674;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="winner hidden">
+      <h1>Player Wins!</h1>
+      <div>
+        <button class="button" type="button" onClick="refreshPage()">
+          Restart
+        </button>
+      </div>
+    </div>
+    <script src="modal.js"></script>
+    <script src="index.js"></script>
+    <script>
+      function refreshPage() {
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
