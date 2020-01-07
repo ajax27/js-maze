@@ -248,3 +248,7 @@ Events.on(engine, 'collisionStart', event => {
     }
   });
 });
+
+function refreshPage() {
+  window.location.reload();
+}
